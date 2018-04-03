@@ -1,0 +1,39 @@
+.Order{
+    border: thin solid #ccc;
+    background: white;
+    padding: 1%;
+    min-height: 100px;
+    margin: 1% 0%;
+    box-shadow: 2px 2px 2px #eee;
+    font-size: medium;
+}
+
+.Title{
+    font-size: large;
+    font-weight: bold;
+    color: #28A745;
+}
+
+.Order li{
+    display: inline-block;
+    background: #28A745;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    color: white;
+    font-size: small;
+    font-weight: 300;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.Button{
+    font-size: medium;
+    color: #28A745;
+    cursor: hand;
+}
+
+.Button:hover{
+    cursor: pointer;
+}

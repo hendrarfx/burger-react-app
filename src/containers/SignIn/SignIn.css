@@ -1,0 +1,14 @@
+.SignIn{
+    width:50%;
+    margin: 12% auto 0% auto;
+}
+
+.SignIn h1,.SignIn h2,.SignIn h3,.SignIn h4,.SignIn h5 {
+    text-align: center;
+}
+
+.RegisterPanel{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 12pt;
+}

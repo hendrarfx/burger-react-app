@@ -1,0 +1,18 @@
+.ButtonContainer{
+    text-align: right;
+}
+
+.Button{
+    margin:1%;
+}
+
+@media (max-width: 575px) {
+    .ButtonContainer{
+        text-align: center;
+    }
+
+    .ButtonCancel, .ButtonContinue{
+        margin: 0.5%;
+        width:47%;
+    }
+}

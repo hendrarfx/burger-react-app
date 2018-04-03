@@ -1,0 +1,10 @@
+
+@media (max-width: 576px) {
+    .Wrapper {
+        margin-top: 5%;
+    }
+
+    .Wrapper:nth-child(1) {
+        margin-top: 0%;
+    }
+}

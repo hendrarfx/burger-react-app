@@ -1,0 +1,14 @@
+.Register{
+    width:50%;
+    margin: 8% auto 0% auto;
+}
+
+.Register h1,.Register h2,.Register h3,.Register h4,.Register h5 {
+    text-align: center;
+}
+
+.RegisterPanel{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 12pt;
+}

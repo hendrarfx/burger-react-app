@@ -1,0 +1,43 @@
+.Input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.Label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.InputElement {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.InputElement:focus {
+    outline: none;
+    background-color: #fff;
+    border: solid thin #28A745;
+    box-shadow: 2px 2px 10px #b6feb0;
+}
+
+.Option{
+    border: solid thin #28A745;
+}
+
+.Error{
+    border: thin solid salmon;
+}
+
+.ErrorMessage{
+    color: salmon;
+    font-size: small;
+    margin: 5px 0px;
+}

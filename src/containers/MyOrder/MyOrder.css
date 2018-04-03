@@ -1,0 +1,20 @@
+.MyOrder{
+    width: 95%;
+    margin:8% auto 0% auto;
+}
+
+.MyProfile{
+    border:thin solid #ccc;
+    min-height: 250px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px #eee;
+    text-align: center;
+}
+
+.ProfileImage{
+    width:100px;
+    height: auto;
+    border-radius: 250px;
+    text-align: center;
+    margin: 5% auto;
+}

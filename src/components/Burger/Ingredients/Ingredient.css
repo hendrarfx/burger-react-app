@@ -1,0 +1,41 @@
+
+.BreadBottom {
+    height: auto;
+    width: 80%;
+}
+
+.BreadTop {
+    height: auto;
+    width: 80%;
+}
+
+.Meat {
+    width: 80%;
+    height: auto;
+}
+
+.Cheese {
+    width: 90%;
+    height: auto;
+}
+
+.Salad {
+    margin-top: 0px;
+    width: 85%;
+    height: auto;
+}
+
+.Onions {
+    width: 80%;
+    height: auto;
+}
+
+.Pickles {
+    width: 80%;
+    height: auto;
+}
+
+.Tomato {
+    width: 80%;
+    height: auto;
+}

@@ -1,0 +1,46 @@
+.Menus{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.Menu {
+    width: 30%;
+    border: thin solid #eeeeee;
+    padding: 1%;
+    height: auto;
+    text-align: left;
+    margin: 1%;
+    box-shadow: 2px 2px 2px #ccc;
+
+}
+
+.Menu img {
+    width: 100%;
+    height: auto;
+    max-width: 72px;
+}
+
+.Menu p{
+    font-size: small;
+    min-height: 32px;
+}
+
+.Menu h4 {
+    color: #28A745;
+    font-weight: bold;
+}
+
+.TitleColor{
+    color: #28A745;
+}
+
+.MenuButton{
+    font-size: small;
+    display: flex;
+    align-items: center;
+}
+
+a:hover{
+    text-decoration: none;
+}
+

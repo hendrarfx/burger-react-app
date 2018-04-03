@@ -1,0 +1,70 @@
+.controlIngredients {
+    width: 100%;
+    padding:2% 0%;
+    border-bottom: thin solid #f5f5f5;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.controlIngredients img {
+    width: 75%;
+    height: auto;
+}
+
+.controlIngredients div:nth-child(4),.controlIngredients div:nth-child(3){
+    text-align: center;
+}
+
+.controlIngredients button {
+    font-size: small;
+}
+
+
+@media (max-width: 575px) {
+    .controlIngredients img {
+        display: none;
+    }
+
+    .controlIngredients img {
+        width: 25%;
+        height: auto;
+        display: none;
+    }
+    .controlIngredients div{
+        width: 33%;
+    }
+    .controlIngredients div:nth-child(2){
+        display: none;
+    }
+    .controlIngredients div:nth-child(3){
+        text-align: center;
+    }
+    .controlIngredients div:nth-child(4){
+        text-align: right;
+    }
+}
+
+@media (max-width: 300px) {
+    .controlIngredients img {
+        display: none;
+    }
+
+    .controlIngredients img {
+        width: 25%;
+        height: auto;
+        display: none;
+    }
+    .controlIngredients div{
+        width: 50%;
+    }
+    .controlIngredients div:nth-child(2){
+        display: none;
+    }
+    .controlIngredients div:nth-child(3){
+        text-align: right;
+    }
+    .controlIngredients div:nth-child(4){
+        width: 100%;
+        text-align: right;
+    }
+}

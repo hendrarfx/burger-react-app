@@ -1,0 +1,51 @@
+.BurgerBuilder{
+    padding: 1%;
+}
+.OrderButton {
+    margin-top: 0%;
+}
+
+.BurgerPanel {
+    border: thin solid #eee;
+    padding: 2%;
+    margin-bottom: 10px;
+    min-height: 360px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.TotalPayment {
+    text-align: right;
+
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+@media (max-width: 767px) {
+    .OrderButton {
+        width: 100%;
+        min-height: 60px;
+        font-size: 18pt;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .TotalPayment {
+        text-align: right;
+        right: 0%;
+        margin-bottom: 0%;
+    }
+
+    .BurgerPanel {
+        margin-bottom: 20px;
+    }
+}
+
+.ErrorMessage {
+    height: 100%;
+    width: 100%;
+    top:0;
+    padding-top: 15%;
+    text-align: center;
+    vertical-align: middle;
+}

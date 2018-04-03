@@ -1,0 +1,31 @@
+.burger {
+    width: 75%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    max-height: 325px;
+}
+
+.zeroIngredients{
+    width: 100%;
+    height: auto;
+    font-weight: 300;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 767px) {
+    .burger {
+        height: 250px;
+    }
+}
+
+@media (max-width: 450px) {
+    .burger {
+        height: 150px;
+    }
+}
+
+

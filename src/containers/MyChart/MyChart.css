@@ -1,0 +1,13 @@
+.MyChart {
+    width: auto;
+    height: auto;
+    min-height: 250px;
+    border: thin solid #eeeeee;
+    padding: 1%;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+.MyChartWrapper{
+    width: 75%;
+    margin: 8% auto;
+}

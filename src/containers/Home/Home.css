@@ -1,0 +1,58 @@
+.Menu, .Banner{
+    width:100%;
+    height: auto;
+    text-align: center;
+    min-height:50px;
+}
+
+.LogoContainer{
+    margin:0px auto 15px auto;
+    height: 128px;
+    width: 128px;
+    padding: 15px;
+    border-radius: 128px;
+    background: #28A745;
+}
+.Banner{
+    background-color: #fff;
+    /*
+    border:thin solid #fafafa;
+    background-image: url("../../assets/images/decoration-gray-left.png"),url("../../assets/images/decoration-gray-right.png");
+    background-position: left,right;
+    background-repeat: no-repeat,no-repeat;
+    background-size: 18% 100%,18% 100%;*/
+    color: #555;
+    border-radius: 25px 25px;
+    padding: 2%;
+}
+
+.Menu{
+    background: url("../../assets/images/menu-background.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 2%;
+}
+
+.InsideMenu{
+    width: 100%;
+    padding: 2%;
+    height: auto;
+    background: white;
+    min-height: 250px;
+    box-shadow: 2px 5px 2px #6f653f;
+}
+
+.BannerText{
+    align-items: center; /* align vertical */
+    margin:0 auto;
+    width:50%;
+    height: auto;
+}
+
+.CustomBurgerPanel{
+    width: 80%;
+    margin: 25px auto 0px auto;
+}
+
+button h5, button h1, button h2, button h3, button h4{
+    color: #ffffff;
+}

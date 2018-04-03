@@ -1,0 +1,58 @@
+.Spinner {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 50%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #eee;
+    padding: 16px;
+    left: 25%;
+    top: 30%;
+    box-sizing: border-box;
+    transition: all 1s ease-out;
+    overflow-y: hidden;
+    height: 40%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.SpinnerImage{
+    background: url("../../../assets/images/spinner.gif") no-repeat center;
+    width: 100%;
+    height: auto;
+    margin-top: -5%;
+    margin-bottom: -5%;
+    min-height: 100%;
+    left: 25%;
+}
+.Spinner h4{
+    font-size: 20pt;
+}
+
+@media (max-width: 767px) {
+    .Spinner {
+        width: 90%;
+        height: 40%;
+        left: 5%;
+        top: 30%;
+        overflow-y: hidden;
+    }
+    .Spinner h4{
+        font-size: 18pt;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .Spinner {
+        width: 90%;
+        height: 30%;
+        left: 5%;
+        top: 35%;
+        overflow-y: hidden;
+    }
+    .Spinner h4{
+        font-size: 16pt;
+    }
+
+}

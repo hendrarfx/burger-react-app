@@ -1,0 +1,31 @@
+.Payment{
+    width: 100%;
+}
+
+.Payment table td {
+    width: 23%;
+}
+
+.Payment table {
+    width: 95%;
+    margin: 5%;
+}
+
+.ButtonContainer{
+    text-align: right;
+}
+
+.ButtonCancel, .ButtonContinue{
+    margin:1%;
+}
+
+@media (max-width: 575px) {
+    .ButtonContainer{
+        text-align: center;
+    }
+
+    .ButtonCancel, .ButtonContinue{
+        margin: 0.5%;
+        width:47%;
+    }
+}
