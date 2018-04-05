@@ -6,8 +6,7 @@ import {rootReducer} from './store/RootReducers';
 import React from 'react';
 import createSagaMiddleware from 'redux-saga';
 import {watchSaga} from './store/RootSaga';
-
-import App from './containers/App';
+import Layout from './containers/Layout/Layout';
 
 const burgerApp=()=>{
     const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__:null || compose;
@@ -17,7 +16,7 @@ const burgerApp=()=>{
     return (
         <Provider store={store}>
             <BrowserRouter>
-                <App />
+                <Layout />
             </BrowserRouter>
         </Provider>
     );

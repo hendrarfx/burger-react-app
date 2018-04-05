@@ -11,10 +11,12 @@ class Modal extends Component {
     }
 
     render() {
+        let css = [classes.Modal];
+        this.props.show ? css.push(classes.ModalOpen) : css.push(classes.ModalClose);
         return (
             <Wrapper>
                 <Backdrop show={this.props.show} closed={this.props.closed}/>
-                <div className={classes.Modal}>
+                <div className={css.join(' ')}>
                     {this.props.children}
                 </div>
             </Wrapper>
