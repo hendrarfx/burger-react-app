@@ -84,7 +84,7 @@ export function* login(action) {
             const fetchedOrders = [];
             for (let key in responseUsr.data) {
                 fetchedOrders.push({
-                    ...response.data[key]
+                    ...responseUsr.data[key]
                 });
             }
 

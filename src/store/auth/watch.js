@@ -1,6 +1,7 @@
 import * as authSaga from './saga';
 import * as actionType from './actions';
-import {takeEvery, all} from 'redux-saga/effects';
+import {all,takeEvery} from 'redux-saga/effects';
+/*import {takeEvery} from 'redux-saga';*/
 
 function* watchAuth() {
     yield all([
