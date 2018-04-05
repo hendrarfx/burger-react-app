@@ -1,18 +1,17 @@
-import axios from '../../axios-config';
-
 export const INGREDIENTS = {
     SET_INGREDIENTS: 'SET_INGREDIENTS',
-    INGREDIENTS_FAIL: 'INGREDIENTS_FAIL'
+    INGREDIENTS_FAIL: 'INGREDIENTS_FAIL',
+    FETCH_INGREDIENTS:'FETCH_INGREDIENTS'
 };
 
-const setIngredients = (object) => {
+export const setIngredients = (object) => {
     return {
         type: INGREDIENTS.SET_INGREDIENTS,
         ingredients: object
     }
 };
 
-const setError = (object) => {
+export const setError = (object) => {
     return {
         type: INGREDIENTS.INGREDIENTS_FAIL,
         error: object
@@ -20,13 +19,7 @@ const setError = (object) => {
 };
 
 export const getIngredientsFromServer = () => {
-    return dispatch => {
-        axios.get('/ingredients.json')
-            .then(response => {
-                dispatch(setIngredients(response.data));
-            })
-            .catch(error => {
-                dispatch(setError(error));
-            });
+    return {
+        type:INGREDIENTS.FETCH_INGREDIENTS
     }
 };

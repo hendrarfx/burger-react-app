@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import classes from './MyChart.css';
 import Wrapper from '../../common/hoc/Wrapper';
-import {Inputs, checkValidity, checkFormValid} from '../../components/UI/Input/Inputs';
+import {Inputs, checkValidity, checkFormValid,getFormValueJSONObject} from '../../components/UI/Input/Inputs';
 import {connect} from 'react-redux';
 import * as actionType from '../../store/mychart/action';
 
@@ -91,7 +91,8 @@ class MyChart extends Component {
         formIsValid: false,
         loading: false,
         showConfirmOrder: false,
-        initData: false
+        initData: false,
+        formValue:{}
     };
 
 
@@ -103,7 +104,8 @@ class MyChart extends Component {
         checkValidity(selected);
         orderForm[id] = selected;
         let formValid = checkFormValid(orderForm);
-        this.setState({orderForm: orderForm, formIsValid: formValid});
+        const formValue=getFormValueJSONObject(orderForm);
+        this.setState({orderForm: orderForm, formIsValid: formValid,formValue:formValue});
     }
 
     orderChangeHandler = () => {
@@ -143,7 +145,7 @@ class MyChart extends Component {
             modal = <Modal show={this.state.showConfirmOrder} closed={this.closeDialogConfirmation}>
                 <ConfirmationMessage cancel={this.closeDialogConfirmation} continue={() => {
                     this.setState({showConfirmOrder: false});
-                    this.props.submitMenu(this.state.orderForm, this.props.myChart, this.props.token, this.props.userId);
+                    this.props.submitMenu(this.state.formValue, this.props.myChart, this.props.token, this.props.userId);
                 }}/>
             </Modal>;
         }

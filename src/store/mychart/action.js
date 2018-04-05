@@ -1,5 +1,3 @@
-import axios from '../../axios-config';
-
 export const MY_CHART = {
     ADD_SINGLE_MENU: 'ADD_SINGLE_MENU',
     ADD_CUSTOM_BURGER: 'ADD_CUSTOM_BURGER',
@@ -8,7 +6,8 @@ export const MY_CHART = {
     DECREASE_MENU: 'DECREASE_MENU',
     LOADING_SUBMIT_MENU: 'LOADING_SUBMIT_MENU',
     SET_RESPONSE: 'SET_RESPONSE',
-    RESET_STATE:'RESET_STATE'
+    RESET_STATE: 'RESET_STATE',
+    SUBMIT_PURCHASING: 'SUBMIT_PURCHASING'
 };
 
 export const addSingleMenu = (object) => {
@@ -47,19 +46,19 @@ export const decreaseMenu = (id) => {
 };
 
 
-const loadingSubmitMenu = () => {
+export const loadingSubmitMenu = () => {
     return {
         type: MY_CHART.LOADING_SUBMIT_MENU
     }
 };
 
-const setResponse = (object, message) => {
+export const setResponse = (status, message) => {
     return {
         type: MY_CHART.SET_RESPONSE,
-        success: object,
+        success: status,
         response: {
-            status:object,
-            message:message
+            status: status,
+            message: message
         }
     }
 };
@@ -70,32 +69,12 @@ export const resetState = () => {
     }
 };
 
-export const submitMenuToServer = (orderForm, myChart,token,userId) => {
-    return dispatch => {
-
-        dispatch(loadingSubmitMenu());
-
-        const iOrderForm = [...orderForm];
-        let formObject = [];
-        for (let a = 0; a < iOrderForm.length; a++) {
-            const object = iOrderForm[a];
-            formObject.push('"' + object.id + '":"' + object.value + '"');
-        }
-        const stringObj = '{' + formObject.join(',') + '}';
-        const formValueObject = JSON.parse(stringObj);
-        const submitData = {
-            id: new Date().getTime(),
-            ...formValueObject,
-            userId:userId,
-            purchasingItem: myChart.purchasingItem,
-            totalPayment: myChart.totalPayment
-        }
-
-        axios.post('/orders.json?auth='+token, submitData)
-            .then(response => {
-                dispatch(setResponse(true, null));
-            }).catch(error => {
-            dispatch(setResponse(false, 'failed to submit'));
-        });
-    }
+export const submitMenuToServer = (formValue, myChart, token, userId) => {
+    return {
+        type: MY_CHART.SUBMIT_PURCHASING,
+        formValue: formValue,
+        myChart: myChart,
+        token: token,
+        userId: userId
+    };
 };

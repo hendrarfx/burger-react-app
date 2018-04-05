@@ -1,18 +1,17 @@
-import axios from '../../axios-config';
-
 export const MENU = {
     SET_MENU: 'SET_MENU',
-    SET_MENU_ERROR: 'SET_MENU_ERROR'
+    SET_MENU_ERROR: 'SET_MENU_ERROR',
+    FETCH_MENU: 'FETCH_MENU',
 };
 
-const setMenu = (object) => {
+export const setMenu = (object) => {
     return {
         type: MENU.SET_MENU,
         menu: object
     }
 };
 
-const setError = (object) => {
+export const setError = (object) => {
     return {
         type: MENU.SET_MENU_ERROR,
         error: object
@@ -20,13 +19,7 @@ const setError = (object) => {
 };
 
 export const getMenuFromServer = () => {
-    return dispatch => {
-        axios.get('/menu.json')
-            .then(response => {
-                dispatch(setMenu(response.data));
-            })
-            .catch(error => {
-                dispatch(setError(error));
-            });
+    return {
+        type: MENU.FETCH_MENU
     }
 };

@@ -1,9 +1,8 @@
-import axios from '../../axios-config';
-
 export const ACTION = {
     SET_USER_PROFILE: 'SET_USER_PROFILE',
     SET_USER_PROFILE_ERROR: 'SET_USER_PROFILE_ERROR',
-    SET_USER_PROFILE_IN_PROCESS: 'SET_USER_PROFILE_IN_PROCESS'
+    SET_USER_PROFILE_IN_PROCESS: 'SET_USER_PROFILE_IN_PROCESS',
+    FETCH_SINGLE_USER_PROFILE: 'FETCH_SINGLE_USER_PROFILE'
 };
 
 export const setUserProfile = (object) => {
@@ -13,34 +12,22 @@ export const setUserProfile = (object) => {
     }
 };
 
-const setUserProfileInProcess = (object) => {
+export const setUserProfileInProcess = (object) => {
     return {
         type: ACTION.SET_USER_PROFILE_IN_PROCESS
     }
 };
 
-const setError = (object) => {
+export const setError = (object) => {
     return {
         type: ACTION.SET_USER_PROFILE_ERROR,
     }
 };
 
-export const getUserProfileFromServer = (token,userId) => {
-    return dispatch => {
-        dispatch(setUserProfileInProcess());
-        const queryParams = '?auth=' + token + '&orderBy="userId"&equalTo="' + userId + '"';
-        axios.get('/user.json'+queryParams)
-            .then(response => {
-                const fetchedOrders = [];
-                for ( let key in response.data ) {
-                    fetchedOrders.push( {
-                        ...response.data[key]
-                    } );
-                }
-                dispatch(setUserProfile(fetchedOrders));
-            })
-            .catch(error => {
-                dispatch(setError(error));
-            });
+export const getUserProfileFromServer = (token, userId) => {
+    return {
+        type: ACTION.FETCH_SINGLE_USER_PROFILE,
+        token: token,
+        userId: userId
     }
 };
