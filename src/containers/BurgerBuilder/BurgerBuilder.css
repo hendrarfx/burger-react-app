@@ -1,5 +1,6 @@
 .BurgerBuilder{
     padding: 1%;
+    overflow-x: hidden;
 }
 .OrderButton {
     margin-top: 0%;

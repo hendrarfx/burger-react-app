@@ -6,10 +6,10 @@
 .Menu {
     width: 30%;
     border: thin solid #eeeeee;
-    padding: 1%;
+    padding: 10px;
     height: auto;
     text-align: left;
-    margin: 1%;
+    margin: 10px;
     box-shadow: 2px 2px 2px #ccc;
 
 }
