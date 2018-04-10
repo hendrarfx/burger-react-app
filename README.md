@@ -45,13 +45,13 @@ burgerproject/
     index.js
     logo.svg
 ```
-#### Assets Folder
+### Assets Folder
 Assets folder is used to put the image and another media
 
-#### Common Folder
+### Common Folder
 Common folder is used to put helper function, high order component, and middleware that commonly used in the project
 
-#### Containers Folder
+### Containers Folder
 Containers folder is used to put all containers component. 
 Basically all of the components in this folder is stateful because I want to manage state inside containers.
 
@@ -66,7 +66,7 @@ Inside this folder, there are AppRouter.js to handle all of routes in this proje
 In the code above, I use asyncComponent class to call containers component. But you can import them like usual.
 AsyncComponent class will handle how to import component class asynchronously.I use asyncComponent because I don't want container component class is loaded before the route is opened.
 
-#### Components Folder
+### Components Folder
 Components folder is used to put all components inside containers.
 Basically I want the components in this folder are stateless. But some few of them are stateful.
 
@@ -74,11 +74,11 @@ Why I am using some stateful component?
  - I want to use component lifecycle to handling some props mutation from state in the container. I use this case in Modal.js in /components/UI/Modal.
  - I want to use some props type to handling component input
 
-#### Store
+### Store
 All the implementation of redux in this folder. I am using redux to manage state and redux-saga to manage asynchronous code inside redux.
 Basically, you can also use redux thunk to handle asynchronous code inside redux. I don't want using callback function when fetching data from server. Sometimes, callback function is difficult to handle if the function become complex.
 
-#### axios.config.js
+### axios.config.js
 axios.config.js is the file that manage configuration of link server
 ```$xslt
 import axios from 'axios';
